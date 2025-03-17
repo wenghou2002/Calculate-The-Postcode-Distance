@@ -95,9 +95,14 @@ For a complete experience with the Angular frontend:
 ## API Endpoints
 
 - `GET /api/postcodes/health` - Health check endpoint (no auth required)
-- `GET /api/postcodes/distance?postcode1=SW1A1AA&postcode2=M11AE` - Calculate distance between two postcodes
-- `PUT /api/postcodes/{code}?latitude=51.5074&longitude=-0.1278` - Update postcode coordinates
-- `GET /api/postcodes/list?page=0&pageSize=50` - Get paginated list of postcodes
+- `GET /api/postcodes/distance?postcode1={postcode1}&postcode2={postcode2}` - Calculate distance between two postcodes
+- `PUT /api/postcodes/{code}?latitude={latitude}&longitude={longitude}` - Update postcode coordinates
+- `GET /api/postcodes/list?page={page}&pageSize={pageSize}` - Get paginated list of postcodes
+
+Example:
+```
+GET /api/postcodes/distance?postcode1=SW1A1AA&postcode2=M11AE
+```
 
 ## Technologies Used
 
