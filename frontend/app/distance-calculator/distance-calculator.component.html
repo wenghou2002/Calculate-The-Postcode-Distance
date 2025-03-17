@@ -1,0 +1,61 @@
+<div class="card">
+  <div class="card-header">
+    <h2 class="mb-0">Calculate Distance</h2>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="calculateDistance()">
+      <div class="mb-3">
+        <label for="postcode1" class="form-label">First Postcode</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="postcode1" 
+          name="postcode1"
+          [(ngModel)]="postcode1"
+          placeholder="e.g. SW1A 1AA"
+          required>
+      </div>
+      <div class="mb-3">
+        <label for="postcode2" class="form-label">Second Postcode</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="postcode2" 
+          name="postcode2"
+          [(ngModel)]="postcode2"
+          placeholder="e.g. M1 1AE"
+          required>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-secondary me-md-2" (click)="resetForm()">Reset</button>
+        <button type="submit" class="btn btn-primary" [disabled]="loading">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+          Calculate
+        </button>
+      </div>
+    </form>
+
+    <div *ngIf="error" class="alert alert-danger mt-3">
+      {{ error }}
+    </div>
+
+    <div *ngIf="result" class="result-container mt-3">
+      <h3>Distance Result</h3>
+      <div class="result-item">
+        <strong>Postcode 1:</strong> {{ result.postcode1 }}
+        <div class="coordinates">
+          Lat: {{ result.latitude1 | number:'1.6-6' }}, Lng: {{ result.longitude1 | number:'1.6-6' }}
+        </div>
+      </div>
+      <div class="result-item">
+        <strong>Postcode 2:</strong> {{ result.postcode2 }}
+        <div class="coordinates">
+          Lat: {{ result.latitude2 | number:'1.6-6' }}, Lng: {{ result.longitude2 | number:'1.6-6' }}
+        </div>
+      </div>
+      <div class="result-item">
+        <strong>Distance:</strong> <span class="distance-value">{{ result.distance | number:'1.2-2' }}</span> {{ result.unit }}
+      </div>
+    </div>
+  </div>
+</div> 

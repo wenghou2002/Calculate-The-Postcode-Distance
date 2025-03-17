@@ -1,0 +1,19 @@
+.table th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+  z-index: 1;
+}
+
+.pagination {
+  margin-bottom: 0;
+}
+
+.page-link {
+  cursor: pointer;
+}
+
+.table-responsive {
+  max-height: 70vh;
+  overflow-y: auto;
+} 
