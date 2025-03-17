@@ -56,7 +56,3 @@ The application also provides a command-line interface that can be accessed when
 - Maven
 - Java
 - Angular (Frontend)
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
