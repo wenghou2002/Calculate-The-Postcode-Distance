@@ -105,4 +105,4 @@ For a complete experience with the Angular frontend:
 - Spring Security
 - Maven
 - Java
-- Angular (frontend)
+- Angular (Frontend)
