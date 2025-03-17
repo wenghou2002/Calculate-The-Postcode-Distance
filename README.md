@@ -1,4 +1,4 @@
-# UK Postcode Distance Calculator
+# Postcode Distance Calculator
 
 A Spring Boot application that calculates the distance between UK postcodes using geographic coordinates. The application provides both a REST API and a command-line interface.
 
@@ -28,26 +28,76 @@ A Spring Boot application that calculates the distance between UK postcodes usin
    mvn clean install
    ```
 
-3. Run the application:
+## Running the Application
+
+### Backend Only (CLI Mode)
+
+If you only want to run the backend, you can use the command-line interface:
+
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+Once the application starts, you'll be presented with a menu:
+
+```
+=== Postcode Distance Calculator CLI ===
+
+=== Main Menu ===
+1. Calculate Distance Between Postcodes
+2. Update Postcode Coordinates
+3. Exit
+
+Enter your choice (1-3):
+```
+
+Simply enter the number corresponding to the option you want to use:
+
+1. **Calculate Distance Between Postcodes**: Enter two postcodes to calculate the distance between them
+2. **Update Postcode Coordinates**: Update the coordinates for a specific postcode
+3. **Exit**: Exit the application
+
+### REST API
+
+The application also provides a REST API that can be accessed at:
+
+```
+http://localhost:8080/api/postcodes
+```
+
+Authentication is required for API access:
+- Username: user
+- Password: password
+
+### Running with Frontend
+
+For a complete experience with the Angular frontend:
+
+1. Start the backend:
    ```
    cd backend
    mvn spring-boot:run
    ```
 
+2. Start the frontend:
+   ```
+   cd frontend
+   npm install
+   npm start
+   ```
+
+3. Access the application at:
+   ```
+   http://localhost:4200
+   ```
+
 ## API Endpoints
 
-- `GET /api/postcodes/health` - Health check endpoint
-- `GET /api/postcodes/distance?postcode1=XX1 1XX&postcode2=YY2 2YY` - Calculate distance between two postcodes
+- `GET /api/postcodes/health` - Health check endpoint (no auth required)
+- `GET /api/postcodes/distance?postcode1=SW1A1AA&postcode2=M11AE` - Calculate distance between two postcodes
 - `PUT /api/postcodes/{code}?latitude=51.5074&longitude=-0.1278` - Update postcode coordinates
 - `GET /api/postcodes/list?page=0&pageSize=50` - Get paginated list of postcodes
-
-## Command-Line Interface
-
-The application also provides a command-line interface that can be accessed when running the application. The CLI offers the following options:
-
-1. Calculate Distance Between Postcodes
-2. Update Postcode Coordinates
-3. Exit
 
 ## Technologies Used
 
@@ -55,8 +105,4 @@ The application also provides a command-line interface that can be accessed when
 - Spring Security
 - Maven
 - Java
-- Angular (Frontend)
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
+- Angular (frontend)
