@@ -1,25 +1,35 @@
-<div class="container mt-4">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Postcode Distance</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/distance-calculator" routerLinkActive="active">Distance Calculator</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/postcode-updater" routerLinkActive="active">Postcode Updater</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/postcode-list" routerLinkActive="active">Postcode List</a>
-          </li>
-        </ul>
-      </div>
+<div class="app-container">
+  <header class="app-header">
+    <div class="logo-container">
+      <h1>Postcode Distance</h1>
+      <span class="tagline">UK Postcode Distance Calculator</span>
     </div>
-  </nav>
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a routerLink="/distance-calculator" routerLinkActive="active">
+            <i class="fas fa-calculator"></i> Distance Calculator
+          </a>
+        </li>
+        <li>
+          <a routerLink="/postcode-updater" routerLinkActive="active">
+            <i class="fas fa-edit"></i> Postcode Updater
+          </a>
+        </li>
+        <li>
+          <a routerLink="/postcode-list" routerLinkActive="active">
+            <i class="fas fa-list"></i> Postcode List
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   
-  <router-outlet></router-outlet>
+  <main class="content-container">
+    <router-outlet></router-outlet>
+  </main>
+  
+  <footer class="app-footer">
+    <p>Postcode Distance Calculator</p>
+  </footer>
 </div> 

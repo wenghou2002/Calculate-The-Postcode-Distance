@@ -1,6 +1,6 @@
 # Postcode Distance Calculator
 
-A Spring Boot application that calculates the distance between UK postcodes using geographic coordinates. The application provides both a REST API and a command-line interface.
+A Spring Boot application that calculates the distance between UK postcodes using geographic coordinates. The application provides both a REST API, command-line interface, and a modern Angular frontend.
 
 ## Features
 
@@ -9,11 +9,13 @@ A Spring Boot application that calculates the distance between UK postcodes usin
 - View list of postcodes
 - Simple command-line interface
 - RESTful API endpoints
+- Modern, responsive UI with animations and visual feedback
 
 ## Prerequisites
 
 - Java 11 or higher
 - Maven 3.6 or higher
+- Node.js and npm (for frontend)
 
 ## Setup and Installation
 
@@ -104,10 +106,37 @@ Example:
 GET /api/postcodes/distance?postcode1=SW1A1AA&postcode2=M11AE
 ```
 
+## UI Enhancements
+
+The application features a modern, user-friendly interface with the following enhancements:
+
+### Visual Design
+- Clean, professional design system with consistent spacing and colors
+- Modern color scheme with gradient accents and carefully selected typography
+- Improved visual hierarchy to help users focus on important elements
+- Card-based design with subtle animations and elevation effects on hover
+
+### User Experience
+- Enhanced form elements with icon-based fields and helpful hints
+- Improved visual feedback for all user interactions
+- Intuitive navigation with icon indicators
+- Responsive design that works well on all device sizes
+- Better data visualization for coordinates and distances
+
+### Technical Implementation
+- Custom CSS variables for consistent theming
+- Hover animations and transitions for interactive elements
+- Enhanced loading states and error handling
+- Improved accessibility with better color contrast and focus states
+- Semantic HTML structure for better SEO and screen reader support
+
 ## Technologies Used
 
-- Spring Boot
+- Spring Boot (Backend)
 - Spring Security
 - Maven
 - Java
 - Angular (Frontend)
+- HTML5/CSS3 with modern features
+- Font Awesome icons
+- Google Fonts (Poppins)
